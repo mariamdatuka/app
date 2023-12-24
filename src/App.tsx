@@ -1,7 +1,8 @@
-import Layout from "./components/Layout/Layout"
 import { Route, Routes } from "react-router-dom"
-import Transactions from "./pages/Transactions"
+import Layout from "./components/Layout/Layout"
 import Dashboard from "./pages/Dashboard"
+import Transactions from "./pages/Transactions"
+
 
 function App() {
   
