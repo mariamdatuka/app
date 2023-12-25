@@ -4,7 +4,7 @@ import NavBar from "../NavBar.tsx/NavBar"
 const Layout = () => {
   return (
     <>
-      <section className='grid grid-cols-12 gap-10'>
+      <section className='h-screen p-8 grid grid-cols-12 gap-10'>
             <div className='col-span-3'>
             <NavBar/>  
             </div>  

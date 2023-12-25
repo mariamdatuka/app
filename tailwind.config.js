@@ -5,9 +5,13 @@ module.exports = {
     colors: {
       dark: "#0F0F0F",
       mainGray: "#4F4F4F",
-      mainPurple: "#8d62d5",
+      main: "#776e93",
+      sec:"#4f4762",
+      hover:"#4c445a",
+      mainBg:'#f3edf2', 
       red: "#ff0101",
-      mainbg: "rgb(15, 23, 36)",
+      mainText: "rgb(15, 23, 36)",
+      white:"#FFF"
     },
     extend: {},
     plugins: [],
