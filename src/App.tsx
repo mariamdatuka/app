@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom"
-import Layout from "./components/Layout/Layout"
+import MainLayout from "./components/Layouts/MainLayout"
 import Dashboard from "./pages/Dashboard"
 import Transactions from "./pages/Transactions"
 import Incomes from "./pages/Incomes"
@@ -12,7 +12,7 @@ function App() {
   return (
     <>
     <Routes>
-      <Route path='/' element={<Layout/>}>
+      <Route path='/' element={<MainLayout/>}>
       <Route index path='/' element={<Dashboard/>}/>
       <Route path='transactions' element={<Transactions/>}/>
       <Route path='incomes' element={<Incomes/>}/>

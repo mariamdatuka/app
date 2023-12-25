@@ -1,8 +1,14 @@
+import Layout from "../components/Layouts/Layout"
 
 
 const Incomes = () => {
   return (
-    <div>Incomes</div>
+    <>
+     <Layout title='income' mainTitle='Incomes'>
+         <div>hi</div>
+         <div>bla</div>
+     </Layout>
+    </>
   )
 }
 

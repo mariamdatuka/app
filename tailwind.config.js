@@ -11,7 +11,8 @@ module.exports = {
       mainBg:'#f3edf2', 
       red: "#ff0101",
       mainText: "rgb(15, 23, 36)",
-      white:"#FFF"
+      white:"#FFF",
+      lightbg:'#fbf5fa',
     },
     extend: {},
     plugins: [],
