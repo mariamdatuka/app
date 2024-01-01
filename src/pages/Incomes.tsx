@@ -5,7 +5,9 @@ const Incomes = () => {
   return (
     <>
      <Layout title='income' mainTitle='Incomes'>
-         <div>hi</div>
+         <form>
+          
+         </form>
          <div>bla</div>
      </Layout>
     </>
