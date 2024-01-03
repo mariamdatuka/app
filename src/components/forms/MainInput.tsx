@@ -1,4 +1,4 @@
-import { useForm } from "react-hook-form"
+import { useFormContext } from "react-hook-form"
 
 interface InputProps{
     placeholder?:string;
@@ -9,12 +9,12 @@ interface InputProps{
 }
 
 const MainInput = ({placeholder, id, error, name, type='text'}:InputProps) => {
-    const {register}=useForm();
+    const {register}=useFormContext();
   return (
     <>
     <div>
     <input placeholder={placeholder} id={id} type={type} {...register(`${name}`)}/>
-    <p>{error}</p>
+    <p className='text-xs text-red'>{error}</p>
     </div>
    
     </>
