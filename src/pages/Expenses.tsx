@@ -4,6 +4,7 @@ import Layout from "../components/Layouts/Layout"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
 import MainInput from "../components/forms/MainInput"
+import MainButton from "../components/forms/MainButton"
 
 
 const Expenses = () => {
@@ -58,7 +59,7 @@ const Expenses = () => {
           </select>
           <p>{errors.date?.message}</p>
           <MainInput id='reference' name='reference' placeholder='add reference' type='text' error={errors.reference?.message}/>
-          <button>Add Income</button>
+          <MainButton text='add expense' type='submit'/>
           </form>
           </FormProvider>
           

@@ -3,6 +3,7 @@ import MainInput from "../components/forms/MainInput"
 import { useForm, FormProvider } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
+import MainButton from "../components/forms/MainButton"
 
 const Incomes = () => {
   const schema = yup
@@ -55,7 +56,7 @@ const Incomes = () => {
           </select>
           <p>{errors.date?.message}</p>
           <MainInput id='reference' name='reference' placeholder='add reference' type='text' error={errors.reference?.message}/>
-          <button>Add Income</button>
+          <MainButton text='add income' type='submit'/>
          </form>
       </FormProvider>
        
