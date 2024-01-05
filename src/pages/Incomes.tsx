@@ -39,7 +39,7 @@ const Incomes = () => {
     <>
      <Layout title='income' mainTitle='Incomes'>
       <FormProvider {...methods}>
-      <form className='flex flex-col gap-4' onSubmit={handleSubmit(onSubmit)}>
+      <form className='flex flex-col gap-6' onSubmit={handleSubmit(onSubmit)}>
           <MainInput type='text' name='salary' id='salary' placeholder='Salary Title' error={errors.salary?.message}/>
           <MainInput type='text' name='amount' id='amount' placeholder='Salary Amount' error={errors.amount?.message}/>
           <input type='date' id='date' {...register('date')} placeholder='select date' />
