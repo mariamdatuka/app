@@ -5,6 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
 import MainButton from "../components/forms/MainButton"
 
+
 const Incomes = () => {
   const schema = yup
   .object({
@@ -50,15 +51,15 @@ const Incomes = () => {
           <p className='text-xs text-red absolute'>{errors?.date?.message}</p>
           </div> 
           <div className='relative self-end'>
-          <select {...register('option')} id='option' name='option' className=' p-1 rounded-md   bg-lightbg border-2 border-white' defaultValue='' >
-            <option value='' disabled >Select Option</option>
-            <option value='salary'>Salary</option>
-            <option value='freelancing'>Freelancing</option>
-            <option value='investments'>Investments</option>
-            <option value='stocks'>Stocks</option>
-            <option value='bitcins'>Bitcoins</option>
-            <option value='bank transfer'>Bank transfer</option>
-            <option value='other'>other</option>
+          <select {...register('option')} id='option' name='option' className=' p-1 rounded-md   bg-lightbg border-2 border-white' defaultValue='' data-testid='select'>
+            <option value='' disabled data-testid='option' >Select Option</option>
+            <option value='salary'data-testid='option'>Salary</option>
+            <option value='freelancing'data-testid='option'>Freelancing</option>
+            <option value='investments' data-testid='option'>Investments</option>
+            <option value='stocks'data-testid='option'>Stocks</option>
+            <option value='bitcins' data-testid='option'>Bitcoins</option>
+            <option value='bank transfer' data-testid='option'>Bank transfer</option>
+            <option value='other' data-testid='option'>other</option>
           </select>
           <p className='text-xs text-red absolute'>{errors.option?.message}</p>
           </div>
