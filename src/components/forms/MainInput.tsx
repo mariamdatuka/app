@@ -13,7 +13,7 @@ const MainInput = ({placeholder, id, error, name, type='text'}:InputProps) => {
   return (
     <>
     <div className='relative'>
-    <input placeholder={placeholder} id={id} type={type} {...register(`${name}`)} className='px-2 py-1 rounded-sm'/>
+    <input placeholder={placeholder} id={id} type={type} {...register(`${name}`)} className='px-2 py-1 rounded-md  bg-lightbg border-2 border-white w-full'/>
     <p className='text-xs text-red absolute'>{error}</p>
     </div>
    
