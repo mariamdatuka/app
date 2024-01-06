@@ -11,7 +11,7 @@ const Expenses = () => {
   const schema = yup
   .object({
     salary: yup.string().required('required'),
-    amount: yup.string().required('required'),
+    amount: yup.string().required('required').matches(/^[0-9]+(\.[0-9]*)?$/, "only digits"),
     date:yup.string().required('required'),
     option:yup.string().required('required'),
     reference:yup.string().required('required')
