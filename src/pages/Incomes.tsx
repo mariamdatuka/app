@@ -31,8 +31,12 @@ const Incomes = () => {
     register,
     formState: { errors },
     handleSubmit,
+    reset
   } = methods;
-  const onSubmit = (data:any) => console.log(data)
+  const onSubmit = (data:any) => {
+    console.log(data);
+    reset();
+  }
  
   return (
     <>
@@ -46,7 +50,8 @@ const Incomes = () => {
           <p className='text-xs text-red absolute'>{errors?.date?.message}</p>
           </div> 
           <div className='relative self-end'>
-          <select {...register('option')} className=' p-1 rounded-md  bg-lightbg border-2 border-white' value='select option'>
+          <select {...register('option')} id='option' name='option' className=' p-1 rounded-md   bg-lightbg border-2 border-white' defaultValue='' >
+            <option value='' disabled >Select Option</option>
             <option value='salary'>Salary</option>
             <option value='freelancing'>Freelancing</option>
             <option value='investments'>Investments</option>
@@ -55,7 +60,7 @@ const Incomes = () => {
             <option value='bank transfer'>Bank transfer</option>
             <option value='other'>other</option>
           </select>
-          <p className='text-xs text-red absolute'>{errors.date?.message}</p>
+          <p className='text-xs text-red absolute'>{errors.option?.message}</p>
           </div>
           <MainInput id='reference' name='reference' placeholder='add reference' type='text' error={errors.reference?.message}/>
           <MainButton text='Add income' type='submit' classNames='self-start'/>
