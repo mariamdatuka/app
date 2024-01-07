@@ -4,13 +4,14 @@ import { useForm, FormProvider } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
 import MainButton from "../components/forms/MainButton"
+import axios from 'axios';
 
 
 const Incomes = () => {
   const schema = yup
   .object({
     salary: yup.string().required('required'),
-    amount: yup.string().required('required').matches(/^[0-9]+(\.[0-9]*)?$/, "only digits"),
+    amount: yup.string().required('required').matches(/^[0-9]+(\.[0-9]*)?$/,"only digits"),
     date:yup.string().required('required'),
     option:yup.string().required('required'),
     reference:yup.string()
@@ -34,10 +35,17 @@ const Incomes = () => {
     handleSubmit,
     reset
   } = methods;
-  const onSubmit = (data:any) => {
+  const onSubmit = async(data:any) => {
     console.log(data);
     reset();
+    try {
+      const response=await axios.get('https://jsonplaceholder.typicode.com/users/')
+      console.log(response);
+    } catch (error) {
+      console.log(error)
+    }
   }
+
  
   return (
     <>
@@ -48,7 +56,7 @@ const Incomes = () => {
           <MainInput type='text' name='amount' id='amount' placeholder='Salary Amount' error={errors.amount?.message}/>
           <div className='relative w-full'>
           <input type='date' id='date' {...register('date')} placeholder='select date' className='px-2 py-1  w-full rounded-md  bg-lightbg border-2 border-white'/>
-          <p className='text-xs text-red absolute'>{errors?.date?.message}</p>
+          <p data-testid='date'className='text-xs text-red absolute'>{errors?.date?.message}</p>
           </div> 
           <div className='relative self-end'>
           <select {...register('option')} id='option' name='option' className=' p-1 rounded-md   bg-lightbg border-2 border-white' defaultValue='' data-testid='select'>

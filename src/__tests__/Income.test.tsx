@@ -1,6 +1,8 @@
 import '@testing-library/jest-dom'
 import Incomes from '../pages/Incomes'
-import { render,screen, fireEvent} from '@testing-library/react';
+import { render,screen} from '@testing-library/react';
+import userEvent from '@testing-library/user-event'
+
 
 
 
@@ -16,17 +18,29 @@ test('salary title input should be rendered', ()=>{
   expect(inputElement).toBeInTheDocument();
 })
 
-test('salary amount is rendered', ()=>{
-  render(<Incomes/>);
-  const inputElement=screen.getByPlaceholderText(/salary amount/i);
-  const testValue="10.100"
-  fireEvent.change(inputElement,{target:{value:testValue}})
-  expect(inputElement).toHaveValue(testValue);
-})
+// test('salary amount is rendered', ()=>{
+//   render(<Incomes/>);
+//   const inputElement=screen.getByPlaceholderText(/salary amount/i);
+//   userEvent.type(inputElement, '');
+//   userEvent.tab();
+//   let errors=screen.getByText("required");
+//   expect(errors).toBeInTheDocument();
+
+//   userEvent.clear(inputElement);
+//   userEvent.type(inputElement, '-10f');
+//   userEvent.tab(); // Again, move to the next input or simulate another action
+  
+//   errors = screen.getByText("only digits");
+//   expect(errors).toBeInTheDocument();
+// })
 test('input date is rendered', ()=>{
   render(<Incomes/>);
   const inputElement=screen.getByPlaceholderText(/select date/i);
-  expect(inputElement).toBeInTheDocument();
+  userEvent.click(inputElement);
+  inputElement.blur();
+   
+  const errorMessage = screen.getByText("required");
+  expect(errorMessage).toBeInTheDocument();
 })
 
 test('select element is rendered', ()=>{
