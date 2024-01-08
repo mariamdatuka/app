@@ -2,7 +2,9 @@
 
 const Transactions = () => {
   return (
-    <div>Transactions</div>
+    <div>
+      <h1>blablabla</h1>
+    </div>
   )
 }
 
