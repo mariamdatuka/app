@@ -1,5 +1,3 @@
-
-
 const Transactions = () => {
   return (
     <div>
@@ -9,9 +7,13 @@ const Transactions = () => {
         <p>Time</p>
         <p>Income</p>
         <p>Expense</p>
+        <p>Expense</p>
+        <p>Expense</p>
+        <p>Expense</p>
+        <p>Expense</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Transactions
+export default Transactions;
