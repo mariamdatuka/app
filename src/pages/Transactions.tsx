@@ -9,6 +9,10 @@ const Transactions = () => {
         <p>Time</p>
         <p>Income</p>
         <p>Expense</p>
+        <p>Expense</p>
+        <p>Expense</p>
+        <p>Expense</p>
+        <p>Expense</p>
       </div>
     </div>
   )
