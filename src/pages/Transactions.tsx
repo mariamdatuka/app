@@ -21,6 +21,18 @@ const Transactions = () => {
           hahaha
         </a>
       </div>
+      <div>
+        <p>Date</p>
+        <p>Time</p>
+        <p>Income</p>
+        <p>Expense</p>
+        <p>Expense</p>
+        <p>Expense</p>
+        <p>Expense</p>
+        <p>Expense</p>
+        <div>
+          love life
+        </div>
     </div>
   );
 };
