@@ -68,6 +68,9 @@ const Incomes = () => {
             <option value='bitcins' data-testid='option'>Bitcoins</option>
             <option value='bank transfer' data-testid='option'>Bank transfer</option>
             <option value='other' data-testid='option'>other</option>
+            <option value='other' data-testid='option'>other</option>
+            <option value='other' data-testid='option'>other</option>
+            <option value='other' data-testid='option'>other</option>
           </select>
           <p className='text-xs text-red absolute'>{errors.option?.message}</p>
           </div>
