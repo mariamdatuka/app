@@ -4,6 +4,7 @@ import Dashboard from "./pages/Dashboard"
 import Transactions from "./pages/Transactions"
 import Incomes from "./pages/Incomes"
 import Expenses from "./pages/Expenses"
+import Admin from "./components/Admin"
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Route path='incomes' element={<Incomes/>}/>
       <Route path='expenses' element={<Expenses/>}/>
       </Route>
+      <Route path="/admin" element={<Admin/>}/>
     </Routes>
     </>
   )
