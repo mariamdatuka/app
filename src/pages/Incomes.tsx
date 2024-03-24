@@ -9,6 +9,7 @@ import axios from 'axios';
 
 const Incomes = () => {
   console.log('bla')
+  console.log('hello world');
   const schema = yup
   .object({
     salary: yup.string().required('required'),
